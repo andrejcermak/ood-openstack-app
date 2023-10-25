@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+{% include 'heading.html' %}
+<body>
+  <section class="main">
+        <div class="container">You are now scoped to the project: {{data}}<div>
+            
+            <form method="POST" action="/new-instance">
+                <button class="btn btn-primary mt-3" type="submit">Launch VM Instance</button>
+            </form>
+  <section>
+
+</body>
+</html>

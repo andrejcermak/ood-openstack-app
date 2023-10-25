@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+{% include 'heading.html' %}
+<!-- 
+<script src="<%= url("/jquery-3.2.1/jquery-3.2.1.min.js") %>"></script>
+<script src="<%= url("/bootstrap-3.3.7-dist/js/bootstrap.min.js") %>"></script> -->
+
+
+<body>
+
+  <section class="main">
+        <div class="container-xxl">
+        <h1>Select OpenStack Project</h1>
+        <form method="POST" action="/scoped">
+            <div class="form-group">
+                <label for="selectOption">Select an option:</label>
+                <select class="form-control" id="selectOption" name="selectedOption">
+                    <option value="">Your projects</option>
+                    {% for item in data %}
+                        <option value="{{ item.id }}">{{ item.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="mt-2 btn btn-primary">Submit</button>
+        </form>
+    </div>
+  </section>
+<!--    <p>You can launch a test VM on OpenStack.</p>
+        <button type="button "onclick="location.href='./openstack/path-to-redirect'" class="btn" disabled data-toggle="tooltip" data-placement="bottom" title="Currently not supported">Start VM</button>
+  </section> //-->
+
+</body>
+</html>

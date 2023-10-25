@@ -1,0 +1,7 @@
+flask
+requests
+keystoneauth1
+openstacksdk
+requests
+flask-socketio
+python-terraform
